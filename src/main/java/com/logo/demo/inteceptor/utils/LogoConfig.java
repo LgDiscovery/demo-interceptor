@@ -102,7 +102,7 @@ public class LogoConfig {
 
             g.dispose();
 
-            ImageIO.write(image, "jpeg", new File("D:/newPic.jpg"));
+            ImageIO.write(image, "jpeg", new File("D:/QRCodeImage/newPic.jpg"));
         }
         catch (Exception e)
         {
@@ -156,10 +156,10 @@ public class LogoConfig {
     public static void main(String args[]) {
         try {
             //二维码表示的内容
-            String content = "http://www.cnblogs.com/";
+            String content = "我牛逼";
 
             //存放logo的文件夹
-            String path = "E:/QRCodeImage";
+            String path = "D:/QRCodeImage";
 
             MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
 
@@ -198,9 +198,9 @@ public class LogoConfig {
             int fontStyle = 1; //字体风格
 
             //用来存放带有logo+文字的二维码图片
-            String newImageWithText = "D:/imageWithText.jpg";
+            String newImageWithText = "D:/QRCodeImage/imageWithText.jpg";
             //带有logo的二维码图片
-            String targetImage = "D:/newPic.jpg";
+            String targetImage = "D:/QRCodeImage/newPic.jpg";
             //附加在图片上的文字信息
             String text = "文字测试一二三四五六123";
 
