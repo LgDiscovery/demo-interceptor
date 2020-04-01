@@ -10,7 +10,7 @@ public class PropUtils {
 
     private static Logger logger = LoggerFactory.getLogger(PropUtils.class);
 
-    private  static Properties properties;
+    public static Properties properties;
 
     static {
         try {

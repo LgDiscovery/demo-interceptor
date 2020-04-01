@@ -6,12 +6,13 @@ import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
 import java.util.Map;
+import java.util.Properties;
 
 public class YmlUtils {
 
     private static Logger logger = LoggerFactory.getLogger(YmlUtils.class);
 
-    private static Map<String,Object> map;
+    public static Map<String,Object> map;
 
     static {
         try {
