@@ -1,11 +1,12 @@
 package com.logo.demo.inteceptor.utils;
 
 import com.google.zxing.common.BitMatrix;
+
 import javax.imageio.ImageIO;
-import java.io.File;
-import java.io.OutputStream;
-import java.io.IOException;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
 
 public final class MatrixToImageWriter {
 
