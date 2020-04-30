@@ -5,7 +5,7 @@ import org.junit.Test;
 
 
 
-class DemoInteceptorApplicationTests {
+class CollectApplicationTests {
 
     @Test
     void contextLoads() {
