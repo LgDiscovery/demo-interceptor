@@ -1,3 +1,4 @@
+/*
 package com.logo.demo.inteceptor.utils;
 
 import com.google.zxing.BarcodeFormat;
@@ -28,10 +29,12 @@ public class LogoConfig {
     private final Color borderColor;
     private final int logoPart;
 
-    /**
+    */
+/**
      * Creates a default config with on color {@link #BLACK} and off color
      * {@link #WHITE}, generating normal black-on-white barcodes.
-     */
+     *//*
+
     public LogoConfig()
     {
         this(DEFAULT_BORDERCOLOR, DEFAULT_LOGOPART);
@@ -57,12 +60,14 @@ public class LogoConfig {
     {
         return logoPart;
     }
-    /**
+    */
+/**
      * 给二维码图片添加Logo
      *
      * @param qrPic
      * @param logoPic
-     */
+     *//*
+
     public static void addLogo_QRCode(File qrPic, File logoPic, LogoConfig logoConfig)
     {
         try
@@ -73,15 +78,19 @@ public class LogoConfig {
                 System.exit(0);
             }
 
-            /**
+            */
+/**
              * 读取二维码图片，并构建绘图对象
-             */
+             *//*
+
             BufferedImage image = ImageIO.read(qrPic);
             Graphics2D g = image.createGraphics();
 
-            /**
+            */
+/**
              * 读取Logo图片
-             */
+             *//*
+
             BufferedImage logo = ImageIO.read(logoPic);
 
             int widthLogo = image.getWidth()/logoConfig.getLogoPart();
@@ -110,7 +119,8 @@ public class LogoConfig {
         }
     }
 
-    /**
+    */
+/**
      * @为图片添加文字
      * @param pressText 文字
      * @param newImg    带文字的图片
@@ -120,7 +130,8 @@ public class LogoConfig {
      * @param fontSize
      * @param width
      * @param heigh
-     */
+     *//*
+
     public static void pressText(String pressText, String newImg, String targetImg, int fontStyle, Color color, int fontSize, int width, int height) {
 
         //计算文字开始的位置
@@ -212,3 +223,4 @@ public class LogoConfig {
         }
     }
 }
+*/

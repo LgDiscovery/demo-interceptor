@@ -20,4 +20,9 @@ public class Const {
     // 不验证URL anon：不验证/authc：受控制的
     public static final String NO_INTERCEPTOR_PATH =".*/((.css)|(.js)|(images)|(login)|(anon)).*";
 
+    // 连接的超时时间
+    public static int SOTIMEOUT = 180000;
+    // 等待数据的超时时间
+    public static int CONNECTTIMEOUT = 60000;
+
 }

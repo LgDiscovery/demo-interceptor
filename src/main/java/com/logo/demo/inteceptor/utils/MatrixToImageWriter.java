@@ -1,3 +1,4 @@
+/*
 package com.logo.demo.inteceptor.utils;
 
 import com.google.zxing.common.BitMatrix;
@@ -47,3 +48,4 @@ public final class MatrixToImageWriter {
     }
 
 }
+*/
