@@ -28,50 +28,6 @@ public class HttpClientUtil {
         return strCharSet;
     }
 
-    public void setStrCharSet(String strCharSet) {
-        this.strCharSet = strCharSet;
-    }
-
-    public String getStrContentType() {
-        return strContentType;
-    }
-
-    public void setStrContentType(String strContentType) {
-        this.strContentType = strContentType;
-    }
-
-    public String getStrAccept() {
-        return strAccept;
-    }
-
-    public void setStrAccept(String strAccept) {
-        this.strAccept = strAccept;
-    }
-
-    public String getStrAcceptEncoding() {
-        return strAcceptEncoding;
-    }
-
-    public void setStrAcceptEncoding(String strAcceptEncoding) {
-        this.strAcceptEncoding = strAcceptEncoding;
-    }
-
-    public String getStrUserAgent() {
-        return strUserAgent;
-    }
-
-    public void setStrUserAgent(String strUserAgent) {
-        this.strUserAgent = strUserAgent;
-    }
-
-    public String getStrPragma() {
-        return strPragma;
-    }
-
-    public void setStrPragma(String strPragma) {
-        this.strPragma = strPragma;
-    }
-
     public HttpClientUtil(){
         strCharSet = System.getProperty("JAVA_VB.encode","UTF-8");
         strContentType = "application/x-www-form-urlencoded";
@@ -147,27 +103,7 @@ public class HttpClientUtil {
             e.printStackTrace();
         }finally {
             //关闭资源
-            if(null != br){
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if(null != os){
-                try {
-                    os.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if(null != is){
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            closeStream(is, os, br);
 
             //断开与远程地址url的连接
             connection.disconnect();
@@ -175,6 +111,29 @@ public class HttpClientUtil {
         return buffer.toString();
     }
 
+    private void closeStream(InputStream is, OutputStream os, BufferedReader br) {
+        if(null != br){
+            try {
+                br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(null != os){
+            try {
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(null != is){
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
 }
